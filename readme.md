@@ -19,6 +19,10 @@ The app fetches random cat images from [The Cat API](https://thecatapi.com/) and
 2. View a random cat image
 3. Click the refresh button to load a new image
 
+**OR**
+
+Click on this link to try it out directly: https://cat-api-seven.vercel.app/
+
 ## Technologies
 
 - HTML
