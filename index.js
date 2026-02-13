@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 async function setRandomCatImage() {
+	const loader = document.getElementById('loader')
+	const button = document.getElementById('refresh')
+	loader.style.display = 'block'
+	button.disabled = true
+
 	try {
 		const catapi_call = await fetch('https://api.thecatapi.com/v1/images/search')
 		if (!catapi_call.ok) throw new Error('Failed to fetch cat image')
@@ -18,6 +23,9 @@ async function setRandomCatImage() {
 	} catch (error) {
 		console.error('Error loading cat:', error)
 		alert('Failed to load cat image. Try again!')
+	} finally {
+		loader.style.display = 'none'
+		button.disabled = false
 	}
 }
 
